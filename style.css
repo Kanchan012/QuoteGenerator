@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    margin-top: 30px;
+    padding: 8px;
+    line-height: 1.5;
+}
+header h1 {
+    color: rgb(247, 49, 105);
+    font-size: 55px;
+}
+header h3 {
+    font-size: 30px;
+}
+
+.Category {
+    font-size: large;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-top: 5%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#category {
+    padding: 5px;
+    font-size: medium;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 28px;
+}
+
+.switch input {
+  display: none;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #ff8888;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Dark mode */
+.dark {
+  background-color: #000;
+  color: white;
+}
+
+.dark .quote {
+    box-shadow: 2px 4px 20px white;
+}
+
+.dark #quote-text {
+    color: black;
+}
+
+/* Quote */
+.quote {
+    background: white;
+    max-width: 700px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px black;
+    margin-top: 50px;
+}
+
+#quote-text {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: black;
+}
+
+#quote-author {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+#quote-count {
+    font-size: 14px;
+    color: grey;
+    text-align: center;
+}
+
+/*  Buttons  */
+.btn {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.activebtn:hover {
+     transform: translateY(-2px);
+}
+
+.btn-1:hover {
+     transform: translateY(-3px);
+}
+
+.activebtn, .btn-1 {
+    border-radius: 20px;
+    width: 7%;
+    min-width: 90px;
+    height: 35px;
+    border: none;
+    font-size: medium;
+    cursor: pointer;
+}
+
+.btn-1:hover {
+    background: rgb(136, 198, 198);
+}
+
+.activebtn {
+    background: #0284c7;
+    color: white;
+}
+
+/* Font Buttons */
+.font {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.font button {
+    padding: 6px 12px;
+    font-size: medium;
+    border-radius: 15px;
+    border: 1px solid lightgray;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.font button:hover {
+    background: whitesmoke;
+    transform: translateY(-2px);
+}
+
+.font button:active {
+    background: lightcyan;
+    transform: translateY(0);
+}
+
+#font-normal {
+    background: rgb(180, 244, 255);
+}
+
+/*  RESPONSIVE MEDIA QUERIES  */
+
+/* Tablets */
+@media (max-width: 900px) {
+    header h1 {
+        font-size: 42px;
+    }
+    header h3 {
+        font-size: 24px;
+    }
+    .quote {
+        padding: 30px;
+        margin-top: 40px;
+    }
+    #quote-text {
+        font-size: 22px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 35px;
+    }
+    header h3 {
+        font-size: 20px;
+    }
+
+    .Category {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .quote {
+        padding: 25px;
+        width: 90%;
+    }
+
+    #quote-text {
+        font-size: 20px;
+    }
+
+    .btn {
+        gap: 12px;
+    }
+
+    .activebtn, .btn-1 {
+        width: 30%;
+        min-width: 100px;
+    }
+
+    .font button {
+        padding: 6px 10px;
+    }
+}

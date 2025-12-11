@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Quote Generator</title>
+  </head>
+  <body>
+    <header>
+      <h1>Quote Generator</h1>
+      <h3>Get Motivated with Random Quotes</h3>
+    </header>
+
+    <section class="Category">
+      <div>
+        <label for="category">Category</label>
+        <select id="category">
+          <option value="success">Sucess</option>
+          <option value="motivational">Motivational</option>
+          <option value="education">Education</option>
+          <option value="music">Music</option>
+        </select>
+      </div>
+
+      <div class="toggle">
+        <span>Light</span>
+        <label class="switch">
+          <input type="checkbox" id="toggle-theme" />
+          <span class="slider round"></span>
+        </label>
+        <span>Dark</span>
+      </div>
+    </section>
+
+    <div class="quote">
+       <p id="quote-text"></p>
+       <p id="quote-author"></p>
+       <p id="quote-count"></p>
+    </div>
+
+    <div class="btn">
+        <button class="btn-1" id="previous">Previous</button>
+        <button class="activebtn" id="random">Random</button>
+        <button class="btn-1" id="next">Next</button>
+    </div>
+
+    <div class="font">
+        <button id="font-large">Increase(+)</button>
+        <button id="font-normal">Normal</button>
+        <button id="font-small">Decrease(-)</button>
+    </div>
+    <script src="quote.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
