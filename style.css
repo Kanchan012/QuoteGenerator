@@ -242,6 +242,7 @@ input:checked + .slider:before {
     }
 
     .btn {
+        margin-top:2%;
         gap: 12px;
     }
 
