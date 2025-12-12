@@ -133,7 +133,7 @@ input:checked + .slider:before {
 
 /*  Buttons  */
 .btn {
-    margin-top: 2%;
+    margin-top: 5%;
     display: flex;
     justify-content: center;
     gap: 18px;

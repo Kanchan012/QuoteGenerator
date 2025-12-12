@@ -49,25 +49,31 @@ document.getElementById("next").onclick = () => {
     showQuotes();
 };
 
-// font 
+let currentFontSize = 20;
+const minFontSize = 14;
+const maxFontSize = 32;
 
-let currentFontSize=24;
-const quoteText=document.getElementById("quote-text");
+const quoteText = document.getElementById("quote-text");
 
-document.getElementById("font-large").onclick=()=>{
-    currentFontSize +=2;
-    quoteText.style.fontSize =currentFontSize + "px"
-}
+document.getElementById("font-large").onclick = () => {
+  if (currentFontSize < maxFontSize) {
+    currentFontSize += 2;
+  }
+  quoteText.style.fontSize = currentFontSize + "px";
+};
 
-document.getElementById("font-normal").onclick=()=>{
-    currentFontSize = 24;
-    quoteText.style.fontSize =currentFontSize + "px"
-}
+document.getElementById("font-normal").onclick = () => {
+  currentFontSize = 18;
+  quoteText.style.fontSize = currentFontSize + "px";
+};
 
-document.getElementById("font-small").onclick=()=>{
-    currentFontSize -=2;
-    quoteText.style.fontSize =currentFontSize + "px"
-}
+document.getElementById("font-small").onclick = () => {
+  if (currentFontSize > minFontSize) {
+    currentFontSize -= 2;
+  }
+  quoteText.style.fontSize = currentFontSize + "px";
+};
+
 
 
 
